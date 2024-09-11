@@ -8,10 +8,10 @@ public class Main {
      * Method parameter: the radius of a circle
      * Method signature: circleArea(int)
      * Returns the area of a circle. */
-    public static double circleArea(int radius) {
-        return 0;
+    public static double circleArea(double code){
+        double area = Math.PI * code * code;
+        return Math.round(area * 100.0) / 100.0;
     }
-
     /** Method 2
      * Method name: circleCircum
      * Method return type: double
@@ -19,7 +19,8 @@ public class Main {
      * Method signature: circleCircum(int)
      * Returns the circumference of a circle. */
     public static double circleCircum(int radius) {
-        return 0;
+        double circum = Math.PI * 2 * (radius);
+        return Math.round(circum * 100.0) / 100.0;
     }
 
     /** Method 3
@@ -33,7 +34,8 @@ public class Main {
      * Circumference: 18.85
      * Area: 28.27 */
     public static String circleInfo(int radius) {
-        return null;
+        return "Radius: " + radius + "\nCircumference: " + circleCircum(radius) + "\nArea: " + circleArea(radius);
+
     }
 
     /** Method 4
@@ -44,8 +46,9 @@ public class Main {
      * Returns a String detailing the number of hours and minutes.
      * Format of returned String: e.g. 3 hours and 46 minutes */
     public static String minutesToHoursMinutes(int minutes) {
-
-        return null;
+        int Hour = minutes/60;
+        int Minute = minutes%60;
+        return Hour + " hours and " + Minute + " minutes";
     }
 
     /** Method 5
@@ -57,9 +60,10 @@ public class Main {
      * Format of returned String: e.g. 3:56 pm
      * */
     public static String twentyFourToTwelve(String time) {
-
-        return null;
-
+    String[] a = time.split(":");
+        int hour = Integer.parseInt(a[0]);
+        int minute = Integer.parseInt(a[1]);
+    return hour-12 + ":" + minute + " pm";
     }
 
     /** Method 6
@@ -69,9 +73,9 @@ public class Main {
      * Method signature: distanceBetweenTwoPoints(int,int,int,int)
      * Returns the distance between two points */
     public static double distanceBetweenTwoPoints(int x1, int y1, int x2, int y2) {
-
-        return 0;
-
+        double ans1 = (Math.pow(y1-y2,2));
+        double ans2 = (Math.pow(x1-x2,2));
+        return (Math.sqrt(ans1+ans2)*100.0)/100.0;
     }
 
     /** Method 7
