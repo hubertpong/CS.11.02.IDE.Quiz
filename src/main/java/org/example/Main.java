@@ -8,8 +8,8 @@ public class Main {
      * Method parameter: the radius of a circle
      * Method signature: circleArea(int)
      * Returns the area of a circle. */
-    public static double circleArea(double code){
-        double area = Math.PI * code * code;
+    public static double circleArea(double radius){
+        double area = Math.PI * radius * radius;
         return Math.round(area * 100.0) / 100.0;
     }
     /** Method 2
@@ -75,7 +75,7 @@ public class Main {
     public static double distanceBetweenTwoPoints(int x1, int y1, int x2, int y2) {
         double ans1 = (Math.pow(y1-y2,2));
         double ans2 = (Math.pow(x1-x2,2));
-        return (Math.sqrt(ans1+ans2)*100.0)/100.0;
+        return Math.round(Math.sqrt(ans1+ans2)*100.0)/100.0;
     }
 
     /** Method 7
@@ -85,8 +85,7 @@ public class Main {
      * Method signature: fahrenheitToCelsius(int)
      * Returns the degrees celsius equivalent of the degrees in fahrenheit */
     public static double fahrenheitToCelsius(int fahrenheit) {
-
-        return 0;
+        return(double) Math.round((fahrenheit - 32.0)*5.0/9.0*100)/100;
 
     }
 
@@ -98,7 +97,7 @@ public class Main {
      * Returns the degrees fahrenheit equivalent of the degrees in celsius */
     public static double celsiusToFahrenheit(int celsius) {
 
-        return 0;
+        return (double) Math.round((celsius * 1.8+ 32)*100)/100;
 
     }
 
